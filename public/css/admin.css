@@ -1,0 +1,66 @@
+button {
+    all: unset;
+    color: var(--main-color-dark);
+    cursor: pointer;
+    background-color: var(--main-color-light);
+    border-radius: 3rem;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+button:hover,
+button:active {
+    background-color: var(--main-color-dark);
+    color: var(--main-color-light);
+}
+#main {
+    background-color: white;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.line-div {
+    height: 10px;
+    width: 10px;
+    display: hidden;
+}
+
+.paginate-bar {
+    background-color: white;
+    border-radius: 1rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(255, 0, 0, 0);
+    position: sticky;
+    padding: 5px 0;
+    background-color: #aaa;
+    display: inline;
+}
+
+.paginate-bar > * {
+    background-color: unset;
+    border: unset;
+    font-size: 15px;
+    padding: 2px;
+}
+
+#paginate-number {
+    width: 48px;
+    text-align: center;
+    color: white;
+}
+
+#paginate-left {
+    color: white;
+}
+
+#paginate-right {
+    color: white;
+}
