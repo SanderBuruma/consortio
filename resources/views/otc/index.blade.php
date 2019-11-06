@@ -32,6 +32,5 @@
 
 @section('footer')
 <script>
-	setTimeout(function(){ location.reload(); }, 177e3);
 </script>
 @endsection

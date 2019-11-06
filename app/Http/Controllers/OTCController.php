@@ -16,8 +16,7 @@ class OTCController extends Controller
      */
     public function index()
     {
-        Self::updateLocalDb();
-
+        error_log('Otc index Called.');
         $new_matches = DB::table('otc_new_matches')->orderByDesc('created_at')->take(500)->get();
         return view('otc.index')->withMatches($new_matches);
     }
@@ -93,7 +92,8 @@ class OTCController extends Controller
     /**
      * @return this $this
      */
-    private function updateLocalDb() {
+    static public function updateLocalDb() {
+        error_log('Otc updateLocalDb Called.');
         $jsonurl = "https://offworldtc-api-tachyon.stardock.net/v1/products/2618/leaderboards/ladder/0b006c2d-959a-4460-899f-5211741b0976?offset=0&count=100&teamId=&includeMatchData=false";
         $json_1v1 = json_decode(file_get_contents($jsonurl), true);
         $jsonurl = "https://offworldtc-api-tachyon.stardock.net/v1/products/2618/leaderboards/ladder/b855cc1e-b1c2-45bd-936f-f9d39de49f58?offset=0&count=100&teamId=&includeMatchData=false";
@@ -197,7 +197,7 @@ class OTCController extends Controller
                 }
             }
         }
+        error_log(var_dump($count));
         debug($count);
-        return $this;
     }
 }
